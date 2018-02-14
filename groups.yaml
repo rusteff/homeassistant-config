@@ -12,7 +12,6 @@ automation_view:
   name: Automation
   view: yes
   entities:
-     - sensor.bergshamra
      - group.all_scenes
      - group.all_automations
      - group.all_scripts
