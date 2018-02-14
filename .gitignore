@@ -1,8 +1,0 @@
-__pycache__/
-deps/
-tts/
-*.log
-*.db
-/secrets.yaml
-/phue-001788285ca4.conf
-/ps4-games.json
