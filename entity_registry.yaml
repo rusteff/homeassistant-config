@@ -1,0 +1,36 @@
+light.bedroom_ceiling:
+  platform: hue
+  unique_id: 00:17:88:01:10:52:2c:c8-0b
+light.bathroom_ceiling:
+  platform: hue
+  unique_id: 00:17:88:01:10:2f:94:80-0b
+light.rudis_nightlight:
+  platform: hue
+  unique_id: 00:17:88:01:02:b0:2d:74-0b
+light.dining_table_2:
+  platform: hue
+  unique_id: 00:17:88:01:02:cf:0b:c9-0b
+light.livingroom_ceiling:
+  platform: hue
+  unique_id: 00:17:88:01:10:2f:a2:99-0b
+light.hallway_ceiling:
+  platform: hue
+  unique_id: 00:17:88:01:10:2f:a2:93-0b
+light.storage_ceiling:
+  platform: hue
+  unique_id: 00:17:88:01:10:5c:37:ce-0b
+light.cabledrum_bar:
+  platform: hue
+  unique_id: 00:17:88:01:02:9d:4b:61-0b
+light.kitchen_ceiling:
+  platform: hue
+  unique_id: 00:17:88:01:02:53:57:ae-0b
+light.dining_table_1:
+  platform: hue
+  unique_id: 00:17:88:01:02:c5:68:f7-0b
+light.balcony_light:
+  platform: hue
+  unique_id: 84:18:26:00:00:0c:3e:a8-03
+light.closet_ceiling:
+  platform: hue
+  unique_id: 00:17:88:01:10:4f:57:11-0b

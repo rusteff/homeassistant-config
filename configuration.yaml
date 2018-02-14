@@ -1,0 +1,132 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 59.3667
+  longitude: 18.0167
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Stockholm
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+  ignore:
+   - samsung_tv
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+zone:
+  - name: Work
+    latitude: 59.327181
+    longitude: 18.015298
+
+  # This will override the default home zone
+  - name: Home
+    latitude: 59.381435
+    longitude: 18.031290
+    radius: 100
+    icon: mdi:account-multiple
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+  
+alexa:
+
+notify:
+  - platform: pushbullet
+    name: pushbullet
+    api_key: !secret pushbullet_api_key
+  - platform: pushover
+    name: pushover
+    api_key: !secret pushover_api_key
+    user_key: !secret pushover_user_key
+
+#microsoft_face:
+#  api_key: 1c30884f078c4dd3b1a5643023001d05
+#  azure_region: northeurope
+
+#image_processing:
+#  - platform: microsoft_face_detect
+#    group: family
+#    source:
+#      - entity_id: camera.living_room
+
+media_player:
+  #- platform: philips_js
+  #  host: 192.168.1.130
+  #  name: "Living room TV"
+
+  - platform: ps4
+    host: http://192.168.1.254:3031
+    ps4_ip: 192.168.1.228
+    name: "PlayStation 4"
+
+  - platform: kodi
+    host: 192.168.1.223
+
+device_tracker:
+  - platform: asuswrt
+    host: 192.168.1.1
+    username: admin
+    password: !secret asuswrt_password
+    interval_seconds: 10
+    consider_home: 180
+    track_new_devices: no
+  - platform: bluetooth_tracker
+
+camera:
+  - platform: uvc
+    nvr: 192.168.1.167
+    key: !secret uvc_api_key 
+
+sensor: !include sensor.yaml
+scene: !include scene.yaml
+group: !include  groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

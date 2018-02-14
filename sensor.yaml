@@ -1,0 +1,17 @@
+sensor:
+  - platform: yr
+  - platform: sl
+    name: Bergshamra
+    ri4key: !secret sl_info_api_key
+    siteid: 9202
+    lines: 14
+    direction: 2
+
+ # - platform: netatmo
+ #   station: 'Lostigen 22'
+ #   modules:
+ #     module_name1:
+ #       - temperature
+ #     module_name2:
+ #       - temperature
+ #       - battery_vp

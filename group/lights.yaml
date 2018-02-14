@@ -1,0 +1,28 @@
+Balcony lights:
+  entities:
+    - light.balcony
+
+Living room lights:
+  entities:
+    - light.livingroom_ceiling
+    - light.cabledrum_bar
+
+kitchen lights:
+  entities:
+    - light.kitchen_ceiling
+
+Dining room lights:
+  entities:
+    - light.dining_table_1
+    - light.dining_table_2
+
+Hallway lights:
+  entities:
+    - light.hallway_ceiling
+    - light.storage_ceiling
+
+Bedroom lights:
+  entities:
+    - light.bedroom_ceiling
+    - light.rudis_nightlight
+    - light.closet_ceiling

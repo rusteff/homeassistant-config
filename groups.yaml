@@ -1,0 +1,82 @@
+default_view:
+  name: Home
+  view: yes
+  entities:
+     - sensor.sl_bergshamra
+     - group.living_room_lights
+     - group.kitchen_lights
+     - group.bathroom_lights
+     - group.bedroom_lights
+
+automation_view:
+  name: Automation
+  view: yes
+  entities:
+     - sensor.bergshamra
+     - group.all_scenes
+     - group.all_automations
+     - group.all_scripts
+     - group.all_lights
+
+living_room_view:
+  name: Living room
+  view: yes
+  entities:
+     - group.living_room_lights
+     - media_player.playstation_4
+     - media_player.kodi
+     - camera.living_room
+
+kitchen_view:
+  name: Kitchen
+  view: yes
+  entities:
+     - group.kitchen_lights
+     - group.dining_room_lights
+
+bathroom_view:
+  name: Bathroom
+  view: yes
+  entities:
+      - group.bathroom_lights
+      - sensor.bathroom_motion_sensor
+
+bedroom_view:
+  name: Bedroom
+  view: yes
+  entities:
+      - group.bedroom_lights
+      - sensor.closet_motion_sensor
+
+Balcony lights:
+  entities:
+    - light.balcony
+
+Living room lights:
+  entities:
+      - light.livingroom_ceiling
+      - light.cabledrum_bar
+
+kitchen lights:
+  entities:
+      - light.kitchen_ceiling
+
+Dining room lights:
+  entities:
+      - light.dining_table_1
+      - light.dining_table_2
+
+Hallway lights:
+  entities:
+      - light.hallway_ceiling
+      - light.storage_ceiling
+
+Bathroom lights:
+  entities:
+      - light.bathroom_ceiling
+
+Bedroom lights:
+  entities:
+      - light.bedroom_ceiling
+      - light.rudis_nightlight
+      - light.closet_ceiling

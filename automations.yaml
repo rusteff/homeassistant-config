@@ -1,0 +1,84 @@
+# Turn on lights if someone is home
+  - alias: 'Rule 1 Light on in the evening'
+    trigger:
+      platform: state
+      entity_id: group.all_devices
+      to: 'home'    
+    condition:                               
+      - condition: state                     
+        entity_id: sun.sun                   
+        state: 'below_horizon'    
+    action:                   
+        service: scene.turn_on
+        entity_id: scene.livingroom_normal
+
+# Turn off lights when everybody leaves the house
+  - alias: 'Rule 2 - Away Mode'
+    trigger:
+      platform: state
+      entity_id: group.all_devices
+      to: 'not_home'
+    action:
+      service: script.away_mode
+
+      # Turn off lights when everybody leaves the house
+  - alias: 'Rule 3 - turn on Exterior lights in the evening'
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "+00:30:00"
+    action:
+      service: light.turn_on
+      entity_id: group.exterior_lights
+
+  - alias: 'Rule 4 - Dissable motion detect when home'
+    trigger:
+      platform: state
+      entity_id: group.all_devices
+      to: 'home'    
+    action:
+      service: script.security_disable_motion_detect
+
+# Dim lights  when media playing            
+  - alias: 'Rule 5 - Dim lights  when media playing'
+    trigger:
+      - platform: state
+        entity_id: media_player.playstation_4, media_player.kodi
+        to: 'playing'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action:
+        service: scene.turn_on
+        entity_id: scene.livingroom_dim
+
+# Dim lights up when kodi is paused
+  - alias: 'Rule 5 - Dim lights  when Kodi is paused'
+    trigger:
+      - platform: state
+        entity_id: media_player.kodi
+        from: 'playing'
+        to: 'paused'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action:
+        service: scene.turn_on
+        entity_id: scene.livingroom_normal
+
+# Dim lights up when playstation is idle
+  - alias: "Rule 8 - Dim lights  when Playstation4 is idle"
+    trigger:
+      - platform: state
+        entity_id: media_player.playstation_4
+        from: 'playing'
+        to: 'idle'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action:
+        service: scene.turn_on
+        entity_id: scene.livingroom_normal
