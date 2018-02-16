@@ -3,7 +3,7 @@ default_view:
   view: yes
   entities:
      - sensor.sl_bergshamra
-     - people_group
+     - group.people_group
      - group.living_room_lights
      - group.kitchen_lights
      - group.bathroom_lights
