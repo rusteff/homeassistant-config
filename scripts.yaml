@@ -6,7 +6,7 @@ away_mode:
   - service: camera.enable_motion_detection
     entity_id: camera.living_room
   - service: light.turn_off
-    entity_id: group.Interior_lights
+    entity_id: group.interior_lights
 
 security_disable_motion_detect:
   sequence:

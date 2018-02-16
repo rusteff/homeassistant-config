@@ -85,3 +85,16 @@ People:
   entities:
       - device_tracker.rudisiphone
       - device_tracker.d4389c013e3f
+
+Exterior lights:
+  entities:
+      - group.balcony_lights
+
+Interior lights:
+  entities:
+      - group.living_room_lights
+      - group.kitchen_lights
+      - group.dining_room_lights
+      - group.hallway_lights
+      - group.bathroom_lights
+      - group.bedroom_lights
