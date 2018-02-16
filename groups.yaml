@@ -3,6 +3,7 @@ default_view:
   view: yes
   entities:
      - sensor.sl_bergshamra
+     - people_group
      - group.living_room_lights
      - group.kitchen_lights
      - group.bathroom_lights
@@ -79,3 +80,9 @@ Bedroom lights:
       - light.bedroom_ceiling
       - light.rudis_nightlight
       - light.closet_ceiling
+
+people_group:
+  name: People
+   entities:
+      - device_tracker.rudisiphone
+      - device_tracker.d4389c013e3f
