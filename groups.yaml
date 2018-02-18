@@ -34,10 +34,10 @@ kitchen_view:
      - group.kitchen_lights
      - group.dining_room_lights
 
-bathroom_view:
-  name: Bathroom
-  view: yes
-  entities:
+#bathroom_view:
+#  name: Bathroom
+#  view: yes
+#  entities:
 #     - group.bathroom_lights
 #     - sensor.bathroom_motion_sensor
 
@@ -71,8 +71,8 @@ Hallway lights:
       - light.hallway_ceiling
       - light.storage_ceiling
 
-Bathroom lights:
-  entities:
+#Bathroom lights:
+#  entities:
 #     - light.bathroom_ceiling
 
 Bedroom lights:
@@ -96,5 +96,5 @@ Interior lights:
       - group.kitchen_lights
       - group.dining_room_lights
       - group.hallway_lights
-      - group.bathroom_lights
+#      - group.bathroom_lights
       - group.bedroom_lights
