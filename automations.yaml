@@ -1,4 +1,4 @@
-    - alias: 'Rule 1 - Dissable motion detect when home'
+  - alias: 'Rule 1 - Dissable motion detect when home'
     trigger:
       platform: state
       entity_id: group.all_devices
