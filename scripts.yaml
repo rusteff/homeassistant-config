@@ -5,8 +5,9 @@ away_mode:
       message: "Motion detect enabled for {{ states.camera.living_room.attributes.friendly_name }}"
   - service: camera.enable_motion_detection
     entity_id: camera.living_room
-  - delay:
-    minutes: 1
+  
+  - delay: 00:01:30
+
   - service: light.turn_off
     entity_id: group.interior_lights
 
