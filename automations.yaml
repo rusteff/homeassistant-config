@@ -1,89 +1,89 @@
-  - alias: 'Rule 1 - Dissable motion detect when home'
-    trigger:
-      platform: state
-      entity_id: group.all_devices
-      to: 'home'    
-    action:
-      service: script.security_disable_motion_detect
+- alias: 'Rule 1 - Dissable motion detect when home'
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    to: 'home'    
+  action:
+    service: script.security_disable_motion_detect
 
-  - alias: 'Rule 2 - Away Mode'
-    trigger:
-      platform: state
-      entity_id: group.all_devices
-      to: 'not_home'
-    action:
-      service: script.away_mode
+- alias: 'Rule 2 - Away Mode'
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    to: 'not_home'
+  action:
+    service: script.away_mode
 
-    - alias: 'Rule 3 - turn on Exterior lights in the evening'
-    trigger:
-      platform: sun
+- alias: 'Rule 3 - turn on Exterior lights in the evening'
+  trigger:
+    - platform: sun
       event: sunset
       offset: "+00:30:00"
-    action:
-      service: light.turn_on
-      entity_id: group.exterior_lights
+  action:
+    service: light.turn_on
+    entity_id: group.exterior_lights
 
-  - alias: 'Rule 4 Lights on in living room'
-    trigger:
-      platform: state
-      entity_id: sensor.living_room_motion_sensor
-      to: 'on'    
-    condition:                               
-      - condition: state                     
-        entity_id: sun.sun                   
-        state: 'below_horizon'    
-    action:                   
-        service: light.turn_off
-        entity_id: group.living_room_lights
+- alias: 'Rule 4 Lights on in living room'
+  trigger:
+    platform: state
+    entity_id: sensor.living_room_motion_sensor
+    to: 'on'    
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'   
+  action:                   
+    service: light.turn_off
+    entity_id: group.living_room_lights
 
-  - alias: 'Rule 5 Lights off living room'
-    trigger:
+- alias: 'Rule 5 Lights off living room'
+  trigger:
     - platform: state
       entity_id: sensor.living_room_motion_sensor
       to: 'off'
       for:
         minutes: 10    
-    action:                   
-        service: scene.turn_on
-        entity_id: scene.livingroom_normal        
+  action:                   
+    service: scene.turn_on
+    entity_id: scene.livingroom_normal        
 
-  - alias: 'Rule 6 - Dim lights  when media playing'
-    trigger:
-      - platform: state
-        entity_id: media_player.playstation_4, media_player.kodi
-        to: 'playing'
-    condition:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-    action:
-        service: scene.turn_on
-        entity_id: scene.livingroom_dim
+- alias: 'Rule 6 - Dim lights  when media playing'
+  trigger:
+    - platform: state
+      entity_id: media_player.playstation_4, media_player.kodi
+      to: 'playing'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+    service: scene.turn_on
+    entity_id: scene.livingroom_dim
 
-  - alias: 'Rule 7 - Dim lights  when Kodi is paused'
-    trigger:
-      - platform: state
-        entity_id: media_player.kodi
-        from: 'playing'
-        to: 'paused'
-    condition:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-    action:
-        service: scene.turn_on
-        entity_id: scene.livingroom_normal
+- alias: 'Rule 7 - Dim lights  when Kodi is paused'
+  trigger:
+    - platform: state
+      entity_id: media_player.kodi
+      from: 'playing'
+      to: 'paused'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+    service: scene.turn_on
+    entity_id: scene.livingroom_normal
 
-  - alias: "Rule 8 - Dim lights  when Playstation4 is idle"
-    trigger:
-      - platform: state
-        entity_id: media_player.playstation_4
-        from: 'playing'
-        to: 'idle'
-    condition:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-    action:
-        service: scene.turn_on
-        entity_id: scene.livingroom_normal
+- alias: "Rule 8 - Dim lights  when Playstation4 is idle"
+  trigger:
+    - platform: state
+      entity_id: media_player.playstation_4
+      from: 'playing'
+      to: 'idle'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+      service: scene.turn_on
+      entity_id: scene.livingroom_normal
