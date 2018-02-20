@@ -1,18 +1,19 @@
 away_mode:
   sequence:
-   - service: light.turn_off
-     entity_id: group.interior_lights
+    - service: light.turn_off
+      entity_id: group.interior_lights
 
-  - service: notify.pushover
-    data:
-      message: "Motion detect enabled for {{ states.camera.living_room.attributes.friendly_name }}"
-  - service: camera.enable_motion_detection
-    entity_id: camera.living_room
+    - service: camera.enable_motion_detection
+      entity_id: camera.living_room
+    - service: notify.pushover
+      data:
+        message: "Motion detect enabled for {{ states.camera.living_room.attributes.friendly_name }}"
+
 
 security_disable_motion_detect:
   sequence:
-  - service: notify.pushover
-    data:
-      message: "Motion detect disabled for {{ states.camera.living_room.attributes.friendly_name }}"
-  - service: camera.disable_motion_detection
-    entity_id: camera.living_room
+    - service: notify.pushover
+      data:
+        message: "Motion detect disabled for {{ states.camera.living_room.attributes.friendly_name }}"
+    - service: camera.disable_motion_detection
+      entity_id: camera.living_room
