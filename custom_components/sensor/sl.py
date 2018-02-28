@@ -29,7 +29,7 @@ CONF_LINES = 'lines'
 CONF_NAME = 'name'
 CONF_DIRECTION = 'direction'
 
-UPDATE_FREQUENCY = timedelta(seconds=60)
+UPDATE_FREQUENCY = timedelta(seconds=120)
 FORCED_UPDATE_FREQUENCY = timedelta(seconds=5)
 
 USER_AGENT = "Home Assistant SL Sensor"
