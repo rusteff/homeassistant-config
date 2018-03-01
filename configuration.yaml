@@ -97,6 +97,13 @@ notify:
 #    source:
 #      - entity_id: camera.living_room
 
+netatmo:
+  api_key: !secret netatmo_api_key
+  secret_key: !secret netatmo_secret_key
+  username: !secret netatmo_username
+  password: !secret netatmo_password
+  discovery: true
+
 media_player:
   #- platform: philips_js
   #  host: 192.168.1.130
