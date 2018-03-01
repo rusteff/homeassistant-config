@@ -109,10 +109,10 @@ media_player:
   #  host: 192.168.1.130
   #  name: "Living room TV"
 
-  - platform: ps4
-    host: http://192.168.1.254:3031
-    ps4_ip: 192.168.1.228
-    name: "PlayStation 4"
+  #- platform: ps4
+  #  host: http://192.168.1.254:3031
+  #  ps4_ip: 192.168.1.228
+  #  name: "PlayStation 4"
 
   - platform: kodi
     host: 192.168.1.223
