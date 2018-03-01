@@ -6,10 +6,11 @@
     lines: 14
     direction: 2
   - platform: template
-    sensor.sl_bergshamra:
-      friendly_name: 'Bergshamra next departure'
-      value_template: '{{states.sensor.sl_bergshamra.attributes.next_departure}}'
+    sensors:
+      sensor.sl_bergshamra:
+        friendly_name: 'Bergshamra next departure'
+        value_template: '{{states.sensor.sl_bergshamra.attributes.next_departure}}'
 
-     sensor.sl_bergshamra:
-      friendly_name: 'Bergshamra upcoming departure'
-      value_template: '{{states.sensor.sl_bergshamra.attributes.upcoming_departure}}'
+      sensor.sl_bergshamra:
+        friendly_name: 'Bergshamra upcoming departure'
+        value_template: '{{states.sensor.sl_bergshamra.attributes.upcoming_departure}}'
