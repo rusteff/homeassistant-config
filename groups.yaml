@@ -2,7 +2,8 @@ default_view:
   name: Home
   view: yes
   entities:
-     - sensor.sl_bergshamra
+     - sensor.sl_bergshamra_next_departure
+     - sensor.sl_bergshamra_upcoming_departure
      - group.people
      - group.living_room_lights
      - group.kitchen_lights
