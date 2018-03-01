@@ -10,8 +10,6 @@
       sl_bergshamra_next_departure:
         friendly_name: 'Bergshamra next departure'
         value_template: '{{states.sensor.sl_bergshamra.attributes.next_departure}}'
-        icon_template: mdi:subway-variant
       sl_bergshamra_upcoming_departure:
         friendly_name: 'Bergshamra upcoming departure'
         value_template: '{{states.sensor.sl_bergshamra.attributes.upcoming_departure}}'
-        icon_template: mdi:subway-variant
