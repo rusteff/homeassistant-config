@@ -17,7 +17,14 @@
         icon_template: mdi-subway-variant
   - platform: miflora
     mac: 'C4:7C:8D:66:88:F9'
-    name: Common ivy
+    name: Common Ivy
+    monitored_conditions:
+      - temperature
+      - light
+      - moisture
+      - battery
+    mac: 'C4:7C:8D:66:64:85'
+    name: White Orchid
     monitored_conditions:
       - temperature
       - light
