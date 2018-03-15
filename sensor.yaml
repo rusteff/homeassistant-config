@@ -31,7 +31,7 @@
       - light
       - moisture
       - battery
-    - platform: miflora  
+  - platform: miflora  
     mac: 'C4:7C:8D:66:88:F9'
     name: Wild green
     monitored_conditions:
