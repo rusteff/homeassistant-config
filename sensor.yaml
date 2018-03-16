@@ -23,6 +23,7 @@
       - light
       - moisture
       - battery
+      - conductivity
   - platform: miflora  
     mac: 'C4:7C:8D:66:64:85'
     name: plant_avocado
@@ -31,6 +32,7 @@
       - light
       - moisture
       - battery
+      - conductivity
   - platform: miflora  
     mac: 'C4:7C:8D:66:88:FA'
     name: plant_wild_green
@@ -39,3 +41,4 @@
       - light
       - moisture
       - battery
+      - conductivity
