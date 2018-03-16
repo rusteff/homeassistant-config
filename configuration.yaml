@@ -133,7 +133,7 @@ camera:
     key: !secret uvc_api_key 
 
 plant:
-  name_of_your_plant: avocado
+  avocado:
     sensors:
       moisture: sensor.plant_avocado_moisture	
       battery: sensor.plant_avocado_battery
@@ -141,7 +141,22 @@ plant:
       conductivity: sensor.plant_avocado_conductivity
       brightness: sensor.plant_avocado_light_intensity
     min_moisture: 20
-
+  wild_green:
+    sensors:
+      moisture: sensor.plant_wild_green_moisture	
+      battery: sensor.plant_wild_green_battery
+      temperature: sensor.plant_wild_green_temperature
+      conductivity: sensor.plant_wild_green_conductivity
+      brightness: sensor.plant_wild_green_light_intensity
+    min_moisture: 20
+  common ivy:
+    sensors:
+      moisture: sensor.plant_common_ivy_moisture	
+      battery: sensor.plant_common_ivy_battery
+      temperature: sensor.plant_common_ivy_temperature
+      conductivity: sensor.plant_common_ivy_conductivity
+      brightness: sensor.plant_common_ivy_light_intensity
+    min_moisture: 20
 sensor: !include sensor.yaml
 scene: !include scene.yaml
 group: !include  groups.yaml
