@@ -133,7 +133,7 @@ camera:
     key: !secret uvc_api_key 
 
 plant:
-      name_of_your_plant: wild_green
+  name_of_your_plant: wild_green
     sensors:
       moisture: sensor.plant_wild_green_moisture	
       battery: sensor.plant_wild_green_battery
@@ -142,7 +142,7 @@ plant:
       brightness: sensor.plant_wild_green_light_intensity
     min_moisture: 20
 
-    name_of_your_plant: common ivy
+  name_of_your_plant: common ivy
     sensors:
       moisture: sensor.plant_common_ivy_moisture	
       battery: sensor.plant_common_ivy_battery
