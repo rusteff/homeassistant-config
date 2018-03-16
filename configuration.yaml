@@ -141,7 +141,6 @@ plant:
       conductivity: sensor.plant_wild_green_conductivity
       brightness: sensor.plant_wild_green_light_intensity
     min_moisture: 20
-
   name_of_your_plant: common ivy
     sensors:
       moisture: sensor.plant_common_ivy_moisture	
@@ -150,7 +149,6 @@ plant:
       conductivity: sensor.plant_common_ivy_conductivity
       brightness: sensor.plant_common_ivy_light_intensity
     min_moisture: 20
-  
   name_of_your_plant: avocado
     sensors:
       moisture: sensor.plant_avocado_moisture	
