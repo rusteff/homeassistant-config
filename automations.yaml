@@ -91,6 +91,6 @@
 - alias: 'Update Plant Problems'
   trigger:
     - platform: state
-      entity_id: group_all_plants
+      entity_id: group.all_plants
   action:
     - service: python_script.plant_problems
