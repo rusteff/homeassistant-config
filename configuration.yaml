@@ -157,6 +157,7 @@ plant:
       conductivity: sensor.plant_common_ivy_conductivity
       brightness: sensor.plant_common_ivy_light_intensity
     min_moisture: 20
+python_script:
 sensor: !include sensor.yaml
 scene: !include scene.yaml
 group: !include  groups.yaml
