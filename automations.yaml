@@ -87,3 +87,10 @@
   action:
       service: scene.turn_on
       entity_id: scene.livingroom_normal
+
+- alias: 'Update Plant Problems'
+  trigger:
+    - platform: state
+      entity_id: group_all_plants
+  action:
+    - service: python_script.plant_problems
