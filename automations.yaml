@@ -93,4 +93,4 @@
     - platform: state
       entity_id: group.all_plants
   action:
-    - service: python_script.plant_problems
+    - service: python_script.plant_problem
