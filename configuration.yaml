@@ -140,7 +140,7 @@ plant:
       temperature: sensor.plant_avocado_temperature
       conductivity: sensor.plant_avocado_conductivity
       brightness: sensor.plant_avocado_light_intensity
-    min_moisture: 20
+    min_moisture: 25
   wild_green:
     sensors:
       moisture: sensor.plant_wild_green_moisture
@@ -148,7 +148,7 @@ plant:
       temperature: sensor.plant_wild_green_temperature
       conductivity: sensor.plant_wild_green_conductivity
       brightness: sensor.plant_wild_green_light_intensity
-    min_moisture: 20
+    min_moisture: 25
   common ivy:
     sensors:
       moisture: sensor.plant_common_ivy_moisture
@@ -156,7 +156,7 @@ plant:
       temperature: sensor.plant_common_ivy_temperature
       conductivity: sensor.plant_common_ivy_conductivity
       brightness: sensor.plant_common_ivy_light_intensity
-    min_moisture: 20
+    min_moisture: 25
 python_script:
 sensor: !include sensor.yaml
 scene: !include scene.yaml
