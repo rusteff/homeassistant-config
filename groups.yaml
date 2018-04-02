@@ -85,7 +85,7 @@ Bedroom lights:
 People:
   entities:
       - device_tracker.rudisiphone
-      - device_tracker.dani
+      - device_tracker.d4389c013e3f
 
 Exterior lights:
   entities:
