@@ -100,7 +100,7 @@ Interior lights:
       - group.bedroom_lights
 
 Plants:
-  entetied:
+  enteties:
       - plant.common_ivy
       - plant.common_avocado
       - plant.common_wild_green	
