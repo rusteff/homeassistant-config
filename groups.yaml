@@ -49,6 +49,14 @@ bedroom_view:
       - group.bedroom_lights
       - sensor.closet_motion_sensor
 
+plant_view:
+  name: Plants
+  view: yes
+  entities:
+      - plant.common_ivy
+      - plant.avocado
+      - plant.wild_green
+
 Balcony lights:
   entities:
     - light.balcony
@@ -98,9 +106,3 @@ Interior lights:
       - group.hallway_lights
 #      - group.bathroom_lights
       - group.bedroom_lights
-
-Plants:
-  enteties:
-      - plant.common_ivy
-      - plant.avocado
-      - plant.wild_green
