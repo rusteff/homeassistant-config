@@ -23,11 +23,11 @@
     service: light.turn_on
     entity_id: group.exterior_lights
 
-- alias: 'Rule 4 Lights on in living room'
+- alias: 'Rule 4 Lights on in living room after sunset'
   trigger:
     platform: state
-    entity_id: sensor.living_room_motion_sensor
-    to: 'on'    
+    entity_id: group.all_devices
+    to: 'home'    
   condition:
     - condition: state
       entity_id: sun.sun
@@ -36,16 +36,18 @@
     service: scene.turn_on
     entity_id: scene.livingroom_normal
 
-- alias: 'Rule 5 Lights off living room'
+- alias: 'Rule 5 Lights on in living room after sunset'
   trigger:
-    - platform: state
-      entity_id: sensor.living_room_motion_sensor
-      to: 'off'
-      for:
-        minutes: 10    
+    - platform: sun
+      event: sunset
+      offset: "+00:30:00"   
+  condition:
+    - condition: state
+      entity_id: group.all_devices
+      state: 'home'   
   action:                   
-    service: light.turn_off
-    entity_id: group.living_room_lights        
+    service: scene.turn_on
+    entity_id: scene.livingroom_normal       
 
 - alias: 'Rule 6 - Dim lights  when media playing'
   trigger:
