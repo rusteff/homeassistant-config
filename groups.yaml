@@ -102,5 +102,5 @@ Interior lights:
 Plants:
   enteties:
       - plant.common_ivy
-      - plant.common_avocado
-      - plant.common_wild_green	
+      - plant.avocado
+      - plant.wild_green	
