@@ -34,7 +34,7 @@
       state: 'below_horizon'   
   action:                   
     service: scene.turn_on
-    entity_id: scene.livingroom_normal
+    entity_id: scene.livingroom_dim
 
 - alias: 'Rule 5 Lights on in living room after sunset'
   trigger:
@@ -47,7 +47,7 @@
       state: 'home'   
   action:                   
     service: scene.turn_on
-    entity_id: scene.livingroom_normal       
+    entity_id: scene.livingroom_dim     
 
 - alias: 'Rule 6 - Dim lights  when media playing'
   trigger:
