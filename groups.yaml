@@ -70,7 +70,7 @@ Dining room lights:
 Hallway lights:
   entities:
       - light.hallway_ceiling
-      
+
 #Bathroom lights:
 #  entities:
 #     - light.bathroom_ceiling
@@ -98,3 +98,9 @@ Interior lights:
       - group.hallway_lights
 #      - group.bathroom_lights
       - group.bedroom_lights
+
+Plants:
+  entetied:
+      - plant.common_ivy
+      - plant.common_avocado
+      - plant.common_wild_green	
