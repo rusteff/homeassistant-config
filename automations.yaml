@@ -23,7 +23,7 @@
     service: light.turn_on
     entity_id: group.exterior_lights
 
-- alias: 'Rule 4 Lights on in living room after sunset'
+- alias: 'Rule 4 Lights on in living room comming home'
   trigger:
     platform: state
     entity_id: group.all_devices
@@ -40,7 +40,7 @@
   trigger:
     - platform: sun
       event: sunset
-      offset: "+00:30:00"   
+      #offset: "+00:30:00"   
   condition:
     - condition: state
       entity_id: group.all_devices
