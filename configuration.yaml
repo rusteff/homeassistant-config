@@ -129,7 +129,7 @@ device_tracker:
 
 camera:
   - platform: uvc
-    nvr: 192.168.1.167
+    nvr: 192.168.1.158
     key: !secret uvc_api_key 
 
 plant:
