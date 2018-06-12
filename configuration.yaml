@@ -132,6 +132,10 @@ camera:
     nvr: 192.168.1.158
     key: !secret uvc_api_key 
 
+neato:
+  username: !sevrets neato_username
+  password: !Secrets neato_password
+
 plant:
   avocado:
     sensors:
