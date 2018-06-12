@@ -133,8 +133,8 @@ camera:
     key: !secret uvc_api_key 
 
 neato:
-  username: !sevrets neato_username
-  password: !Secrets neato_password
+  username: !secret neato_username
+  password: !secret neato_password
 
 plant:
   avocado:
